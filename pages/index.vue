@@ -64,7 +64,6 @@ onMounted(() => {
             end: "bottom center",
             pin: true,
             scrub: true,
-            markers: true,
             onRefresh: () => {
                 sw = sprite!.clientWidth;
                 gsap.set('#target', {width: sw / (frameCount + 1)});
@@ -77,7 +76,6 @@ onMounted(() => {
             x: () => {
                 return -sprite!.clientWidth * (1 - 1 / (frameCount + 1));
             },
-            duration: 1,
             repeat: 10,
             ease: "steps(" + frameCount + ")",
         });
